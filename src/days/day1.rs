@@ -1,31 +1,10 @@
-mod day1_2;
-
 use std::fmt::Debug;
-use std::fs::{File, read_to_string};
-use std::io;
-use std::io::BufRead;
-use std::path::Path;
+use utils::utils::read_file::readfile_by_lines;
+
 fn main() {
     const FILE_NAME: &str = "src/inputs/day1.txt";
-
-    let mut strings_vec: Vec<String> = Vec::new();
-    if let Ok(lines) = read_lines(FILE_NAME) {
-        for line in lines {
-            if let Ok(ip) = line {
-                // println!("String {:?}", ip);
-                strings_vec.push(ip);
-            }
-        }
-    }
-
+    let strings_vec= readfile_by_lines(FILE_NAME);
     println!("{:?}", find_calibration_values_sum(strings_vec));
-
-}
-
-fn read_lines<P>(file_name: P) -> io::Result<io::Lines<io::BufReader<File>>>
-    where P: AsRef<Path>, {
-    let file = File::open(file_name)?;
-    Ok(io::BufReader::new(file).lines())
 }
 
 fn find_calibration_values_sum(strings_vec: Vec<String>) -> i32 {
