@@ -20,7 +20,7 @@ fn find_games_that_match(strings_vec: Vec<String>) -> i32{
         for trial in trials {
             let tokens: Vec<&str> = trial.split_whitespace().collect();
             let mut current_value = 0;
-            for (index, value) in tokens.iter().enumerate() {
+            for (_, value) in tokens.iter().enumerate() {
                 if let Ok(count) = value.parse::<i32>() {
                     current_value = count;
                     continue;
