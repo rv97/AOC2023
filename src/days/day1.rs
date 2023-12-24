@@ -1,3 +1,5 @@
+mod day1_2;
+
 use std::fmt::Debug;
 use utils::utils::read_file::readfile_by_lines;
 
