@@ -13,6 +13,10 @@ path="src/days/day1.rs"
 [[bin]]
 name="day1_2"
 path="src/days/day1_2.rs"
+
+[[bin]]
+name="day2"
+path="src/days/day2.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
