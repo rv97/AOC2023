@@ -1,7 +1,7 @@
 mod day1_2;
 
 use std::fmt::Debug;
-use std::fs::{File, read_to_string};
+use std::fs::File;
 use std::io;
 use std::io::BufRead;
 use std::path::Path;
